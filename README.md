@@ -3,7 +3,7 @@ Django_rest_api example for SibDev
 
 Description of project 
 
-Prepare
+Prepare for Git
 ------------------
     $ git clone --branch master https://github.com/coprocoder/DRF_Sibdev.git 
     $ cd DRF_Sibdev
@@ -11,8 +11,29 @@ Prepare
 	$ python manage.py migrate
 	$ python manage.py runserver
 
+Prepare for Docker
+------------------
+
+>Download image from DockerHub:
+ 
+    docker pull coprocoder/drf_sibdev:sibdev
+
+![alt text](images/pulling.png "Процесс скачивания образа из хаба")
+
+>Create container and run it:
+
+
+    docker-compose up
+
+![alt text](images/compose_up.png "Результат создания контейнера и запуска")
+    
+> Results:
+
+![alt text](images/result_terminal.png "Результат запуска API")
+![alt text](images/result_browser.png "Результат работы API")
+
 URLs
----
+------------------
 
  API
     
@@ -43,7 +64,7 @@ The uploaded file is now on the server. Document dir /media
 
 
 Get
------
+------------------
 
     curl -X GET -S -u "login:password" 127.0.0.1:8000/api/files/
     
@@ -97,8 +118,8 @@ For example:
         }
     ]
     
-Start settings
---------
+Start settings for local project
+------------------
 
 Change detection: finds missing system elements
 

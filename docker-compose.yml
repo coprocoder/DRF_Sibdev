@@ -1,0 +1,38 @@
+version: "3"
+
+services:
+
+
+  web:
+    build: .
+    container_name: docker_django
+    command: python ./manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - "127.0.0.1:8000:8000"
+
+  makemigration:
+    build: .
+    #image: app
+    command: python ./manage.py makemigrations
+    volumes:
+      - .:/code
+    links:
+      - web
+    depends_on:
+      - migration
+      
+  migration:
+    build: .
+    #image: app
+    command: python ./manage.py migrate
+    volumes:
+      - .:/code
+    links:
+      - web
+    depends_on:
+      - web
+
+
+
