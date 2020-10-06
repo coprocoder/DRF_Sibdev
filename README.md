@@ -5,7 +5,7 @@ Description of project
 
 Prepare
 ------------------
-    $ git clone https://github.com/coprocoder/DRF_Sibdev.git 
+    $ git clone --branch master https://github.com/coprocoder/DRF_Sibdev.git 
     $ cd DRF_Sibdev
 	$ pip install -r requirements.txt (only if you don't have Django 3.0 installed)
 	$ python manage.py migrate
