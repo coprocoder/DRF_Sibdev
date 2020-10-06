@@ -6,6 +6,7 @@ Description of project
 Prepare
 ------------------
     $ git clone https://github.com/axelpale/minimal-django-file-upload-example.git
+	$ cd DRF_Sibdev
 	$ pip install -r requirements.txt (only if you don't have Django 3.0 installed)
 	$ python manage.py migrate
 	$ python manage.py runserver
